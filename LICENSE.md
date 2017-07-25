@@ -1,16 +1,3 @@
-# optimusbahn
-
-![optimus](optimus/api/static/optimus/images/optimus.svg)
-
-**OptimusBahn** is a script which visualizes train delays and other informations for easy infrastructure problem detection.
-
-## Feature Overview
-
-## Installation
-
-
-## License
-```
 MIT License
 
 Copyright (c) 2017 Creative Tim
@@ -32,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
-
-## Copyright
-Software:
-Copyright (C) 2017 - Pascal Raszyk <posixpascal@googlemail.com>
-
-Deutsche Bahn Logo (Part of Optimus Logo): 
-Copyright (C) 2017 - Deutsche Bahn AG
-
-Admin Theme:
-Copyright (C) 2017 - Creative Tim (MIT License)

@@ -1,7 +1,7 @@
 import logging
 import threading
 from optimus.logger import logFormatter
-from optimus.api import get_departure_board
+from optimus.bahn import get_departure_board
 from optimus.db import insert_journey
 class StationObserver(object):
     def __init__(self, stations):

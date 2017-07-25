@@ -16,7 +16,6 @@ def run_sql(filename, *args):
         query = sql.read()
         if len(args) > 0:        
             query = query.format(*args)
-        print(query)
         cur.execute(query)
     cur.close()
 

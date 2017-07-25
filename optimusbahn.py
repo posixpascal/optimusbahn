@@ -1,10 +1,12 @@
-import threading 
+import threading
 
-from optimus.stations import Stations
-from optimus.observer import StationObserver
+from optimus.api import api
 from optimus.config import config
-from optimus.utils import thread_group
 from optimus.db import setup_db
+from optimus.observer import StationObserver
+from optimus.stations import Stations
+from optimus.utils import thread_group
+
 
 class Optimus(object):
     """Optimus
@@ -15,7 +17,8 @@ class Optimus(object):
 
     def __init__(self):
         self.stations = Stations.load()
-        self.observers = []  
+        self.observers = []
+        self.api = None
 
     def start(self):
         self.observers = []
@@ -33,7 +36,8 @@ class Optimus(object):
             i += 1
         
         print("Total of {0} Observers started".format(len(self.observers)))
-
+        self.api = threading.Thread(target=api.run, args = ())
+        self.api.start()
 
 
 if __name__ == "__main__":
