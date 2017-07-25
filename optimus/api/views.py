@@ -1,5 +1,6 @@
 from flask import render_template
 from optimus.api import api
+from optimus.db import fetch_sql
 from optimus.config import config as cfg
 
 @api.route('/')
@@ -9,7 +10,8 @@ def index():
 
 @api.route('/trains/')
 def trains():
-    return render_template('trains.html')
+    trains = fetch_sql('sql/list-trains.sql')
+    return render_template('trains.html', trains = trains)
 
 
 @api.route('/stations/')
