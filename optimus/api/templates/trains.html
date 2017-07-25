@@ -44,7 +44,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Übersicht</a>
+                    <a class="navbar-brand" href="#">Züge</a>
                 </div>
             </div>
         </nav>
@@ -53,72 +53,38 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Alle Züge</h4>
-                                <p class="category">Übersicht über aller Züge heute</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Pünktliche Züge
-                                        <i class="fa fa-circle text-danger"></i> Verspätete Züge
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Züge</h4>
+                            <p class="category">Diese Züge werden von Optimus überwacht</p>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">Jahresüberblick</h4>
-                                <p class="category">Verspätungen des Jahres kurz zusammengefasst</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Strecke</th>
+                                <th>Art</th>
+                                <th>Aktionen</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dakota Rice</td>
+                                    <td>$36,738</td>
+                                    <td>Niger</td>
+                                    <td>Oud-Turnhout</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mason Porter</td>
+                                    <td>$78,615</td>
+                                    <td>Chile</td>
+                                    <td>Gloucester</td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Verspätung in Minuten
-                                        <i class="fa fa-circle text-danger"></i> Verspätete Züge
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Verspätungen Heute</h4>
-                                <p class="category">24 Stunden Monitoring über Verspätungen in Minuten</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Heute
-                                        <i class="fa fa-circle text-danger"></i> Gestern
-                                        <i class="fa fa-circle text-warning"></i> Morgen (Prognose)
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -37,9 +37,13 @@ SOFTWARE.
 ## Copyright
 Software:
 Copyright (C) 2017 - Pascal Raszyk <posixpascal@googlemail.com>
+ 
 
 Deutsche Bahn Logo (Part of Optimus Logo): 
 Copyright (C) 2017 - Deutsche Bahn AG
 
 Admin Theme:
 Copyright (C) 2017 - Creative Tim (MIT License)
+
+ICE Teaser Image:
+Taken from [s2.germany.travel](http://s2.germany.travel/media/microsites_media/lgbt/07_how_to_get_there/db/header_01_db_SGG2013.jpg) - Probably (C) Deutsche Bahn AG
