@@ -1,6 +1,6 @@
 # optimusbahn
 
-![optimus](optimus/api/static/optimus/images/optimus.svg)
+![optimus](https://raw.githubusercontent.com/posixpascal/optimusbahn/master/optimus/api/static/optimus/images/optimus.png)
 
 **OptimusBahn** is a script which visualizes train delays and other informations for easy infrastructure problem detection.
 
