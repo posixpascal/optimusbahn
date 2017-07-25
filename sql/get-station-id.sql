@@ -1,0 +1,1 @@
+SELECT id FROM stations WHERE name LIKE '{0}';

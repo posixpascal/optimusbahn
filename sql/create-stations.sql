@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS stations (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(80),
+    EVA_NR INT,
+    ds100 VARCHAR(8),
+    lat FLOAT(10),
+    lng FLOAT(10),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    created_at TIMESTAMP NOT NULL
+);
