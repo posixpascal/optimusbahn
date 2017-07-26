@@ -1,13 +1,75 @@
 # optimusbahn
 
-![optimus](https://raw.githubusercontent.com/posixpascal/optimusbahn/master/optimus/api/static/optimus/images/optimus.png)
+<p align="center">
+ <img src="https://raw.githubusercontent.com/posixpascal/optimusbahn/master/optimus/api/static/optimus/images/optimus.png">
+ 
+ **OptimusBahn** is a script which visualizes train delays and other informations for easy infrastructure problem detection.
+</p>
 
-**OptimusBahn** is a script which visualizes train delays and other informations for easy infrastructure problem detection.
+This is my submission for the **DB Open Data Contest** – unfortunately I only discovered this contest last friday therefore
+I couldn't add all the features I initially planned.  
 
 ## Feature Overview
 
+OptimusBahn collects train delay information on a mySQL database and shows insights on how many trains are delayed (per day, per hour, per month).
+
+It's capable of tracking multiple trains and train stations in near realtime thanks to threading support.
+
+It automatically exports snapshots from the database into a graphs in the webfrontend.
+
+Optimus by default does not make any assumptions on why a certain train is delayed.
+
+
 ## Installation
 
+**Note**: You need at least Python 3.6 for this project.
+
+Clone the repository and install the dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then edit your `config.cfg` file and add the required mySQL connection credentials:
+
+```ini
+[app]
+threads = 1
+
+[mysql]
+host = 127.0.0.1
+user = root
+passwd = root
+db = optimus
+```
+
+Be sure that the mySQL database is created beforehand.
+
+Now start optimus by running:
+```bash
+python optimusbahn.py
+```
+
+## Screenshots
+
+Due to limited timing I can't show you a live version of this script as of now.
+Therefore I'll add a few screenshots to satisfy the curiosity.
+
+ <img src="https://raw.githubusercontent.com/posixpascal/optimusbahn/master/screenshots/dashboard.png">
+ 
+ <img src="https://raw.githubusercontent.com/posixpascal/optimusbahn/master/screenshots/trains.png">
+ 
+ <img src="https://raw.githubusercontent.com/posixpascal/optimusbahn/master/screenshots/stations.png">
+ 
+ <img src="https://raw.githubusercontent.com/posixpascal/optimusbahn/master/screenshots/settings.png">
+ 
+
+## Gotchas
+
+Depending on how many threads you are using the database might crash if you're on MacOS and using MAMP because of default configuration
+limitations.
+
+Adjust to meet the specifications of your current machine/server.
 
 ## License
 ```

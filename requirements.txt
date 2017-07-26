@@ -1,0 +1,6 @@
+beautifulsoup4==4.5.3
+configparser==3.5.0
+Jinja2==2.9.6
+PyMySQL==0.7.11
+requests==2.13.0
+flask==0.12.2
