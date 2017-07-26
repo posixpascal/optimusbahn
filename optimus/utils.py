@@ -1,6 +1,7 @@
 """
 Defines multiple helper methods for optimus
 """
+import re
 
 def thread_group(total_items, size):
     """
@@ -23,3 +24,15 @@ def thread_group(total_items, size):
 
 def truncate(string):
     return string.strip().replace("\n", "").replace("\r", "")
+
+def parse_delay(string):
+    res = re.search('(\+\d)', string)
+    if not res:
+        return 0
+    try:
+        time = res.group(0)
+        time = time.replace("+", "")
+        time = int(time)
+        return time
+    except IndexError:
+        return 0

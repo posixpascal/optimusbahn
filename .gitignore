@@ -5,3 +5,4 @@ logs/
 data/optimus.db
 .idea/
 *.iml
+data/*.json

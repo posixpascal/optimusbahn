@@ -35,6 +35,20 @@ def fetch_sql(filename, *args):
         result.append(row)
     return result
 
+# Fetch in range
+def fetch_sql_in_range(filename, start, end):
+    cur = conn.cursor()
+    cur.connection.autocommit(True)
+    with open(filename, "r") as sql:
+        query = sql.read()
+        query = query.format(start, end)
+        cur.execute(query)
+    cur.close()
+    result = []
+    for row in cur:
+        result.append(row)
+    return result
+
 # Add a page variable to the query before running it
 def fetch_paged_sql(filename, page, size = 25):
     cur = conn.cursor()

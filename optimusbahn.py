@@ -6,6 +6,7 @@ from optimus.db import setup_db
 from optimus.observer import StationObserver
 from optimus.stations import Stations
 from optimus.utils import thread_group
+from optimus.exporter import exporter_start
 
 
 class Optimus(object):
@@ -19,6 +20,7 @@ class Optimus(object):
         self.stations = Stations.load()
         self.observers = []
         self.api = None
+        self.exporter = None
 
     def start(self):
         self.observers = []
@@ -38,6 +40,10 @@ class Optimus(object):
         print("Total of {0} Observers started".format(len(self.observers)))
         self.api = threading.Thread(target=api.run, args = ())
         self.api.start()
+
+        print("Started exporter...")
+        self.exporter = threading.Thread(target=exporter_start)
+        self.exporter.start()
 
 
 if __name__ == "__main__":

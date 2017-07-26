@@ -69,14 +69,14 @@
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
+                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am <span class="trains-lastupdated"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card ">
+                        <div class="card">
                             <div class="header">
                                 <h4 class="title">Jahresüberblick</h4>
                                 <p class="category">Verspätungen des Jahres kurz zusammengefasst</p>
@@ -91,7 +91,7 @@
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
+                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am <span class="year-lastupdated"></span>
                                     </div>
                                 </div>
                             </div>
@@ -110,12 +110,11 @@
                                 <div class="footer">
                                     <div class="legend">
                                         <i class="fa fa-circle text-info"></i> Heute
-                                        <i class="fa fa-circle text-danger"></i> Gestern
-                                        <i class="fa fa-circle text-warning"></i> Morgen (Prognose)
+                                        <i class="fa fa-circle text-danger"></i> Gestern (in Demo nicht vorhanden)
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am...
+                                        <i class="fa fa-clock-o"></i> Zuletzt aktualisiert am <span class="monitoring24-lastupdated"></span>
                                     </div>
                                 </div>
                             </div>
@@ -173,19 +172,20 @@
 <script src="../static/js/bootstrap-notify.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="../static/js/light-bootstrap-dashboard.js"></script>
+<script src="../static/optimus/api.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
 
-        demo.initChartist();
+        window.optimus.initCharts();
 
         $.notify({
             icon: 'pe-7s-gift',
-            message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+            message: "Willkommen im Demo-Modus von Optimus Bahn"
 
         }, {
-            type: 'info',
-            timer: 4000
+            type: 'error',
+            timer: 6000
         });
 
     });

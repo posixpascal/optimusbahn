@@ -25,3 +25,23 @@ def stations(page = 1):
 @api.route('/config/')
 def config():
     return render_template('config.html', cfg = cfg)
+
+@api.route('/data/delays')
+def delays_today():
+    with open('data/delays-today.json', 'r') as f:
+        return f.read()
+
+@api.route('/data/delays/yesterday')
+def delays_yesterday():
+    with open('data/delays-yesterday.json', 'r') as f:
+        return f.read()
+
+@api.route('/data/year')
+def delays_year():
+    with open('data/delay-per-year.json', 'r') as f:
+        return f.read()
+
+@api.route('/data/trains')
+def trains_today():
+    with open('data/trains-today.json', 'r') as f:
+        return f.read()

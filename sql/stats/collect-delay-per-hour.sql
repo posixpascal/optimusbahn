@@ -1,0 +1,1 @@
+SELECT status FROM journeys WHERE created_at BETWEEN '{0}' AND '{1}'
