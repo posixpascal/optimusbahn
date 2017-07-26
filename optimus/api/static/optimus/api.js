@@ -7,11 +7,15 @@ var Optimus = function () {
 };
 
 Optimus.prototype.initChart24hMonitoring = function () {
+    var max = 0;
     var parse = function (d) {
         var res = [];
         for (var i = 0; i <= 23; i++) {
             data_set = d.results["" + i]
             res.push(data_set.total_delay);
+            if (data_set.total_delay > max){
+                max = data_set.total_delay;
+            }
         }
         return res;
     };
@@ -35,7 +39,7 @@ Optimus.prototype.initChart24hMonitoring = function () {
                 var optionsSales = {
                     lineSmooth: false,
                     low: 0,
-                    high: 400,
+                    high: max + 50,
                     showArea: true,
                     height: "245px",
                     axisX: {

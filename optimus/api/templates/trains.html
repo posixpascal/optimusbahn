@@ -63,10 +63,8 @@
                                 <thead>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Strecke</th>
                                 <th>Abfahrt</th>
                                 <th>Ankunft</th>
-                                <th>Fahrtdauer</th>
                                 </thead>
                                 <tbody>
                                 {% for train in trains %}
@@ -75,8 +73,6 @@
                                     <td>{{ train[1] }}</td>
                                     <td>{{ train[2] }}</td>
                                     <td>{{ train[3] }}</td>
-                                    <td>{{ train[4] }}</td>
-                                    <td>{{ train[5] }}</td>
                                 </tr>
                                 {% endfor %}
                                 </tbody>
