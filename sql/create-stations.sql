@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS stations (
     lat FLOAT(10),
     lng FLOAT(10),
     updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-    created_at TIMESTAMP NOT NULL
+    created_at TIMESTAMP NOT NULL  DEFAULT NOW()
 );

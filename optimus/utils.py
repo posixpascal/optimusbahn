@@ -20,3 +20,6 @@ def thread_group(total_items, size):
         groups.append(group)
 
     return groups
+
+def truncate(string):
+    return string.strip().replace("\n", "").replace("\r", "")

@@ -63,29 +63,45 @@
                                 <thead>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Aktionen</th>
+                                <th>EVA NR</th>
+                                <th>DS100</th>
+                                <th>Aktualisiert</th>
                                 </thead>
                                 <tbody>
+                                {% for station in stations %}
                                 <tr>
-                                    <td>1</td>
-                                    <td>Dakota Rice</td>
-                                    <td>Oud-Turnhout</td>
+                                    <td>{{ station[0] }}</td>
+                                    <td>{{ station[1] }}</td>
+                                    <td>{{ station[2] }}</td>
+                                    <td>{{ station[3] }}</td>
+                                    <td>{{ station[6] }}</td>
                                 </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Mason Porter</td>
-                                    <td>Gloucester</td>
-                                </tr>
+                                {% endfor %}
                                 </tbody>
                             </table>
-
+                            <center>
+                                <nav style="margin-top:-30px" aria-label="Page navigation">
+                                <ul class="pagination">
+                                    {% if page > 1 %}
+                                    <li>
+                                        <a href="/stations/{{page - 1 }}" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    <li>
+                                        <a href="/stations/{{ page + 1 }}" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            </center>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">

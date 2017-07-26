@@ -20,6 +20,7 @@ class StationObserver(object):
         for journey in departure_board:
             insert_journey(journey, station)
             self.logger.debug("Add journey to database {0}".format(journey.train))
+            # insert train maybe?
         print("Inserted {0} journeys".format(len(departure_board)))
 
     def setup_logger(self):

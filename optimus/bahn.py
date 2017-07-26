@@ -1,7 +1,10 @@
 import requests
 import moment
+import traceback
 
 from optimus.journey import Journey
+from optimus.train import Train
+from optimus.utils import truncate
 
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -37,14 +40,19 @@ def parse_depature_board(soup):
     entries = soup.select("tr[id^='journeyRow_']")
     for entry in entries:
         journey = Journey()
-        
+
         try:
+            train = Train.from_url(entry.findAll("td", {'class': "train"})[1].find('a')['href'])
+            train.name = truncate(entry.findAll("td", {'class': "train"})[1].text)
+
             journey.time = entry.find("td", {'class': "time"}).text.strip()
-            journey.train = entry.findAll("td", {'class': "train"})[1].text.strip()
-            journey.platform = entry.find("td", {'class': "platform"}).text.strip()
+            journey.train = train
+
+            if entry.find("td", {'class': "platform"}):
+                journey.platform = entry.find("td", {'class': "platform"}).text.strip()
             journey.status = entry.find("td", {'class': 'ris'}).text.strip()
             journeys.append(journey)
-        except:
-            print("ERR")
-    
+        except Exception as e:
+            print(traceback.format_exc())
+
     return journeys
