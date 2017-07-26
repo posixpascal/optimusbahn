@@ -75,7 +75,7 @@ Adjust to meet the specifications of your current machine/server.
 ```
 MIT License
 
-Copyright (c) 2017 Creative Tim
+Copyright (c) 2017 Pascal Raszyk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
